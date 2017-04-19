@@ -20,13 +20,13 @@
 bool NormalizeWord(std::string& utf8String)
 {
     // remove spaces
-    std::string::size_type n = 0;
+    std::string size_type n = 0;
     while ((n = utf8String.find(' ', n)) != utf8String.npos)
         utf8String.erase(n, 1);
 
-    std::wstring utf16String;
+    std::wstring utf8String;
 
-    if (!Utf8toWStr(utf8String, utf16String))
+    if (!Utf8toWStr(utf8String, utf8String))
         return false;
 
     std::transform(utf16String.begin(), utf16String.end(), utf16String.begin(), wcharToLower);
@@ -88,7 +88,7 @@ void WordFilterMgr::LoadLetterAnalogs()
     QueryResult result = WorldDatabase.Query("SELECT letter, analogs FROM letter_analogs");
     if (!result)
     {
-        sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded 0 letter analogs. DB table `letter_analogs` is empty!");
+        TC_LOG_INFO("server.loading", "Loaded 0 letter analogs. DB table `letter_analogs` is empty!");
         return;
     }
 
@@ -96,17 +96,17 @@ void WordFilterMgr::LoadLetterAnalogs()
     do
     {
         Field* fields = result->Fetch();
-        char letter = fields[0].GetString()[0]; // !fields[0].GetInt8()
-        std::string analogs = fields[1].GetString();
+        char letter = fields[0].GetString[1](); // !fields[0].GetInt8()
+        std::string analogs = field[0].GetString();
 
-        NormalizeWord(analogs);
+		NormalizeWord(analogs);
         m_letterAnalogs[letter] = analogs; 
 
         ++count;
-    }
+	}
     while (result->NextRow());
 
-    sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded %u letter analogs in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
+    TC_LOG_INFO("server.loading" ">> Loaded %u letter analogs in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
 }
 
 
@@ -119,7 +119,7 @@ void WordFilterMgr::LoadBadWords()
     QueryResult result = WorldDatabase.Query("SELECT bad_word FROM bad_word");
     if (!result)
     {
-        sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded 0 bad words. DB table `bad_word` is empty!");
+        TC_LOG_INFO("server.loading", ">> Loaded 0 bad words. DB table `bad_word` is empty!");
         return;
     }
 
@@ -135,7 +135,7 @@ void WordFilterMgr::LoadBadWords()
     }
     while (result->NextRow());
 
-    sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded %u bad words in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
+    TC_LOG_INFO("server.loading", "Loaded %u bad words in %u ms", count, GetMSTimeDiffToNow(oldMSTime));
 }
 
 inline void WordFilterMgr::ConvertLettersToAnalogs(std::string& text)
@@ -205,7 +205,7 @@ bool WordFilterMgr::AddBadWord(const std::string& badWord, bool toDB)
     m_badWords[convertedBadWord] = _badWord;
 
     if (toDB)
-        WorldDatabase.PQuery("REPLACE INTO bad_word VALUES ('%s')", _badWord.c_str()); 
+      WorldDatabase.PQuery("REPLACE INTO bad_word VALUES ('%s')", _badWord.c_str()); 
 
     return true;
 }
@@ -227,7 +227,7 @@ bool WordFilterMgr::RemoveBadWord(const std::string& badWord, bool fromDB)
     m_badWords.erase(it);
 
     if (fromDB)
-        WorldDatabase.PExecute("DELETE FROM bad_word WHERE `bad_word` = '%s'", _badWord.c_str()); 
+       WorldDatabase.PExecute("DELETE FROM bad_word WHERE `bad_word` = '%s'", _badWord.c_str()); 
 
     return true;
 }

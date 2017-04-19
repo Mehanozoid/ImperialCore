@@ -18,7 +18,7 @@ public:
 
    bool OnUse(Player* pPlayer, Item* pItem, SpellCastTargets const&) 
    { 
-    if ((pPlayer->isInCombat()) || (pPlayer->isInFlight()) || (pPlayer->isDead())) 
+    if ((pPlayer->IsInCombat()) || (pPlayer->IsInFlight()) || (pPlayer->isDead())) 
     { 
      pPlayer->SendEquipError(EQUIP_ERR_NOT_IN_COMBAT, pItem, NULL); 
      return false; 
@@ -30,7 +30,7 @@ public:
      return false; 
     } 
 
-          pPlayer->RemoveSpellCooldown(8690,true); 
+          pPlayer->RemoveSpell(8690,true); 
           pPlayer->CastSpell(pPlayer,8690,false); 
 
     return false; 

@@ -18,17 +18,18 @@
 #ifndef TRINITYCORE_WORDFILTERMGR_H
 #define TRINITYCORE_WORDFILTERMGR_H
 
-#include <string>
-#include <map>
-#include <ace/Singleton.h>
+#include "string"
+#include "map"
+#include "ostream"
+
+
 
 class WordFilterMgr
 {
     private:
-        friend class ACE_Singleton<WordFilterMgr, ACE_Null_Mutex>;
+		class WordFilterMgr();
 
-        WordFilterMgr();
-        ~WordFilterMgr();
+        WordFilterMgr::~WordFilterMgr();
 
     public:
 		

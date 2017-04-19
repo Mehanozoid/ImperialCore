@@ -760,13 +760,13 @@ enum RBACPermissions
 	
 	RBAC_PERM_COMMAND_WORLD_CHAT                             = 1015,
 	
-	RBAC_PERM_COMMAND_WORD_ADD                               = 1050,
-	RBAC_PERM_COMMAND_WORD_REMOVE                            = 1051,
-	RBAC_PERM_COMMAND_WORD_LIST                              = 1052,
-	RBAC_PERM_COMMAND_WORD_WORDFILTER                        = 1053,
-	RBAC_PERM_COMMAND_WORD_BADWORD                           = 1054,
-	RBAC_PERM_COMMAND_WORD_MOD                               = 1055,
-	RBAC_PERM_COMMAND_RELOAD_ALL_BAD_WORD                    = 1056,
+	RBAC_PERM_COMMAND_WORDFILTER                             = 1050,
+    RBAC_PERM_COMMAND_WORDFILTER_MOD                         = 1051,
+    RBAC_PERM_COMMAND_WORDFILTER_BADWORD                     = 1052,
+    RBAC_PERM_COMMAND_WORDFILTER_BADWORD_ADD                 = 1053,
+    RBAC_PERM_COMMAND_WORDFILTER_BADWORD_REMOVE              = 1054,
+    RBAC_PERM_COMMAND_WORDFILTER_BADWORD_LIST                = 1055,
+	RBAC_PERM_COMMAND_RELOAD_BAD_WORD                        = 1056,
 	RBAC_PERM_COMMAND_RELOAD_LETTER_ANALOG                   = 1057,
 
     // custom permissions 1000+
