@@ -23,6 +23,7 @@ void AddSC_Chat_AntiAd();
 void AddSC_System_Censure();
 void AddSC_custom_misc();
 void AddSC_GOgossip();
+void AddSC_hearthstone_without_cooldown();
 
 
 // The name of this function should match:
@@ -36,4 +37,5 @@ void AddCustomScripts()
 	AddSC_System_Censure();
 	AddSC_custom_misc();
 	AddSC_GOgossip();
+	AddSC_hearthstone_without_cooldown();
 }
