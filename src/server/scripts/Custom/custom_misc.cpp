@@ -28,7 +28,7 @@ class ip_check : public PlayerScript
 public:
     ip_check() : PlayerScript("ip_check") {}
 
-    void OnLogin(Player* player)
+    void AtLogin(Player* player)
     {
         if (sWorld->getBoolConfig(CONFIG_MULTIBOXING_KICK_ENABLE))
         {
