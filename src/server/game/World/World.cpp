@@ -1359,7 +1359,7 @@ void World::LoadConfigSettings(bool reload)
     m_bool_configs[CONFIG_CACHE_DATA_QUERIES] = sConfigMgr->GetBoolDefault("CacheDataQueries", true);
 	
 	// Group join all
-	m_bool_configs[CONFIG_LFG_LOOKING_FOR_GROUP] = ConfigMgr::GetBoolDefault("Looking.For.Group.Join.All", true);
+	m_bool_configs[CONFIG_LFG_LOOKING_FOR_GROUP] = sConfigMgr->GetBoolDefault("Looking.For.Group.Join.All", true);
 
     // call ScriptMgr if we're reloading the configuration
     if (reload)
