@@ -2654,8 +2654,8 @@ SpellMissInfo Spell::DoSpellHitOnUnit(Unit* unit, uint32 effectMask, bool scaleA
 
                                 if (durationadd) 
                                 { 
-                                      switch (m_diminishLevel) 
-                                    { 
+                                      switch (diminishLevel)
+                                    {
                                         case DIMINISHING_LEVEL_1: break; 
                                         // lol, we lost 1 second here 
                                         case DIMINISHING_LEVEL_2: duration += 1000; mod = 0.5f; break; 
