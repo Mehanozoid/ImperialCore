@@ -40,6 +40,7 @@
 #include "SpellHistory.h"
 #include "Transport.h"
 
+
 class misc_commandscript : public CommandScript
 {
 public:
@@ -100,21 +101,24 @@ public:
             { "unstuck",          rbac::RBAC_PERM_COMMAND_UNSTUCK,           true, &HandleUnstuckCommand,          "" },
             { "wchange",          rbac::RBAC_PERM_COMMAND_WCHANGE,          false, &HandleChangeWeather,           "" },
             { "mailbox",          rbac::RBAC_PERM_COMMAND_MAILBOX,          false, &HandleMailBoxCommand,          "" },
+			{ "wordfilter",       rbac::RBAC_PERM_COMMAND_WORDFILTER,       false, NULL,                           "" },
         };
+
         static std::vector<ChatCommand> badWordCommandTable =
         {
-            { "add",              rbac::RBAC_PERM_COMMAND_WORD_ADD,          true, &HandleBadWordAddCommand,       "" },
-            { "remove",           rbac::RBAC_PERM_COMMAND_WORD_REMOVE,       true, &HandleBadWordRemoveCommand,    "" },
-            { "list",             rbac::RBAC_PERM_COMMAND_WORD_LIST,         true, &HandleBadWordListCommand,      "" },
-            { "wordfilter",       rbac::RBAC_PERM_COMMAND_WORD_WORDFILTER,   false, ,                              "", wordFilterCommandTable },
+            { "add",              rbac::RBAC_PERM_COMMAND_WORDFILTER_BADWORD_ADD,          true, &HandleBadWordAddCommand,       "" },
+            { "remove",           rbac::RBAC_PERM_COMMAND_WORDFILTER_BADWORD_REMOVE,       true, &HandleBadWordRemoveCommand,    "" },
+            { "list",             rbac::RBAC_PERM_COMMAND_WORDFILTER_BADWORD_LIST,         true, &HandleBadWordListCommand,      "" },
         };
+
         static std::vector<ChatCommand> wordFilterCommandTable =
         {
-            { "badword",          rbac::RBAC_PERM_COMMAND_WORD_BADWORD,      true,  ,                              "", badWordCommandTable },
-            { "mod",              rbac::RBAC_PERM_COMMAND_WORD_MOD,          true,  &HandleWordFilterModCommand,   "" },
+            { "badword",          rbac::RBAC_PERM_COMMAND_WORDFILTER_BADWORD,      true,  NULL,                          "", badWordCommandTable },
+            { "mod",              rbac::RBAC_PERM_COMMAND_WORDFILTER_MOD,          true,  &HandleWordFilterModCommand,   "" },
         };
+
         return commandTable;
-    }
+	};
 
     static bool HandleBadWordAddCommand(ChatHandler* handler, char const* args)
     {
@@ -127,15 +131,15 @@ public:
             return false;
 		 }
 
-        if (!sWordFilterMgr->AddBadWord(badWord, true))
-        {
+		if (!sWordFilterMgr->AddBadWord(badWord, true))
+		{
             handler->PSendSysMessage("The word '%s' is exist!", badWord.c_str());
             return false;
-		 }
+		}
 
         handler->PSendSysMessage("The word '%s' is added to 'bad_word'.", badWord.c_str());
         return true;
-    }
+	}
 
     static bool HandleBadWordRemoveCommand(ChatHandler* handler, char const* args)
     {

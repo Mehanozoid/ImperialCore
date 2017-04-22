@@ -61,7 +61,6 @@ public:
             { "npc",                           rbac::RBAC_PERM_COMMAND_RELOAD_ALL_NPC,                          true,  &HandleReloadAllNpcCommand,                      "" },
             { "quest",                         rbac::RBAC_PERM_COMMAND_RELOAD_ALL_QUEST,                        true,  &HandleReloadAllQuestCommand,                    "" },
             { "scripts",                       rbac::RBAC_PERM_COMMAND_RELOAD_ALL_SCRIPTS,                      true,  &HandleReloadAllScriptsCommand,                  "" },
-			{ "bad_word",                      rbac::RBAC_PERM_COMMAND_RELOAD_ALL_BAD_WORD,                     true,  &HandleReloadAllBadWordCommand,                  "" },
             { "spell",                         rbac::RBAC_PERM_COMMAND_RELOAD_ALL_SPELL,                        true,  &HandleReloadAllSpellCommand,                    "" },
             { "",                              rbac::RBAC_PERM_COMMAND_RELOAD_ALL,                              true,  &HandleReloadAllCommand,                         "" },
         };
@@ -77,6 +76,7 @@ public:
             { "areatrigger_tavern",            rbac::RBAC_PERM_COMMAND_RELOAD_AREATRIGGER_TAVERN,               true,  &HandleReloadAreaTriggerTavernCommand,          "" },
             { "areatrigger_teleport",          rbac::RBAC_PERM_COMMAND_RELOAD_AREATRIGGER_TELEPORT,             true,  &HandleReloadAreaTriggerTeleportCommand,        "" },
             { "autobroadcast",                 rbac::RBAC_PERM_COMMAND_RELOAD_AUTOBROADCAST,                    true,  &HandleReloadAutobroadcastCommand,              "" },
+			{ "bad_word",                      rbac::RBAC_PERM_COMMAND_RELOAD_BAD_WORD,                         true,  &HandleReloadBadWordCommand,                    "" },
             { "battleground_template",         rbac::RBAC_PERM_COMMAND_RELOAD_BATTLEGROUND_TEMPLATE,            true,  &HandleReloadBattlegroundTemplate,              "" },
             { "broadcast_text",                rbac::RBAC_PERM_COMMAND_RELOAD_BROADCAST_TEXT,                   true,  &HandleReloadBroadcastTextCommand,              "" },
             { "command",                       rbac::RBAC_PERM_COMMAND_RELOAD_COMMAND,                          true,  &HandleReloadCommandCommand,                    "" },
@@ -395,7 +395,7 @@ public:
 
     static bool HandleReloadBadWordCommand(ChatHandler* handler, const char* /*args*/)
     {
-        sLog->outInfo(LOG_FILTER_GENERAL, "Re-Loading Bad Words...");
+        TC_LOG_INFO("WORD_FILTER_GENERAL", "Re-Loading Bad Words...");
         sWordFilterMgr->LoadBadWords();
         handler->SendGlobalGMSysMessage("DB table `bad_word` reloaded.");
         return true;
@@ -403,7 +403,7 @@ public:
 	
     static bool HandleReloadLetterAnalogCommand(ChatHandler* handler, const char* /*args*/)
     {
-        sLog->outInfo(LOG_FILTER_GENERAL, "Re-Loading Letter Analogs...");
+        TC_LOG_INFO("WORD_FILTER_GENERAL", "Re-Loading Letter Analogs...");
         sWordFilterMgr->LoadLetterAnalogs();
         handler->SendGlobalGMSysMessage("DB table `letter_analog` reloaded.");
         return true;

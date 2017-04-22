@@ -20,8 +20,6 @@
 
 #include "string"
 #include "map"
-//include "<ace/Singleton.h>"
-
 
 
 class WordFilterMgr
@@ -64,6 +62,5 @@ class WordFilterMgr
         BadWordMap m_badWords; 
 };
 
-#define sWordFilterMgr ACE_Singleton<WordFilterMgr, ACE_Null_Mutex>::instance()
-
+#define sWordFilterMgr WordFilterMgr::instance()
 #endif
