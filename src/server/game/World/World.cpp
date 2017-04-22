@@ -1503,10 +1503,10 @@ void World::SetInitialWorldSettings()
     sObjectMgr->SetDBCLocaleIndex(GetDefaultDbcLocale());        // Get once for all the locale index of DBC language (console/broadcasts)
     TC_LOG_INFO("server.loading", ">> Localization strings loaded in %u ms", GetMSTimeDiffToNow(oldMSTime));
 
-    sLog->outInfo(LOG_FILTER_SERVER_LOADING, "Loading Letter Analogs...");
+    TC_LOG_INFO("LOG_FILTER_SERVER_LOADING", "Loading Letter Analogs...");
     sWordFilterMgr->LoadLetterAnalogs();
 
-    sLog->outInfo(LOG_FILTER_SERVER_LOADING, "Loading Bad Words...");
+    TC_LOG_INFO("LOG_FILTER_SERVER_LOADING", "Loading Bad Words...");
     sWordFilterMgr->LoadBadWords();
 	
     TC_LOG_INFO("server.loading", "Loading Account Roles and Permissions...");

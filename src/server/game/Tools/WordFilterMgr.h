@@ -20,18 +20,25 @@
 
 #include "string"
 #include "map"
-#include "ostream"
+//include "<ace/Singleton.h>"
 
 
 
 class WordFilterMgr
 {
     private:
+		// friend class ACE_Singleton<WordFilterMgr, ACE_Null_Mutex>;
 		class WordFilterMgr();
 
         WordFilterMgr::~WordFilterMgr();
 
     public:
+
+		static WordFilterMgr* instance()
+		{
+			static WordFilterMgr* instance = new WordFilterMgr();
+			return instance;
+		}
 		
         /// Note for 0.6v : Will used std::map instead of UNORDERED_MAP, because of problems with cross-platform compilation.
         // [letter][analogs] 
