@@ -26,7 +26,6 @@ class WordFilterMgr
 {
     private:
 		// friend class ACE_Singleton<WordFilterMgr, ACE_Null_Mutex>;
-		class WordFilterMgr();
 
         WordFilterMgr::~WordFilterMgr();
 

@@ -22,7 +22,6 @@ void AddSC_DuelReset();
 void AddSC_Chat_AntiAd();
 void AddSC_System_Censure();
 void AddSC_custom_misc();
-void AddSC_GOgossip();
 void AddSC_hearthstone_without_cooldown();
 
 
@@ -36,6 +35,5 @@ void AddCustomScripts()
 	AddSC_Chat_AntiAd();
 	AddSC_System_Censure();
 	AddSC_custom_misc();
-	AddSC_GOgossip();
 	AddSC_hearthstone_without_cooldown();
 }
