@@ -1,7 +1,7 @@
 -- 
 SET @Oguid :=6008;
 DELETE FROM `gameobject` WHERE `id`=186487;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
 (@Oguid, 186487, 571, 1, 1, 2821.75, -3603.67, 245.555, 3.49556, 0, 0, 0.984379, -0.176061, -300, 0, 1);
 
 SET @CGUID := 76053;

@@ -9,7 +9,7 @@ UPDATE `creature_addon` SET `emote`=234 WHERE  `guid`=45477;
 SET @MAXGUID := 923;
 SET @SCRIPTID := 4429600;
 DELETE FROM `waypoint_scripts` WHERE id BETWEEN @SCRIPTID AND @SCRIPTID+3;
-INSERT INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES
+REPLACE INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES
 (@SCRIPTID+0, 3, 32, 308, 0, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),
 (@SCRIPTID+1, 3, 1, 234, 1, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),
 (@SCRIPTID+1, 97, 1, 0, 1, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),

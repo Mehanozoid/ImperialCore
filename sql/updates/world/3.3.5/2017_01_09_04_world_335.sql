@@ -24,7 +24,7 @@ DELETE FROM `creature_text` WHERE  `entry`=8256 AND `groupid`=0 AND `id`=0;
 SET @MAXGUID := 901;
 SET @SCRIPTID := 188700;
 DELETE FROM `waypoint_scripts` WHERE `id` IN (@SCRIPTID+0, @SCRIPTID+1, @SCRIPTID+2);
-INSERT INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
+REPLACE INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
 (@SCRIPTID+0, 2, 0, 2, 0, 4285, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),
 (@SCRIPTID+0, 2, 1, 16, 0, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),
 (@SCRIPTID+1, 2, 1, 69, 1, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),

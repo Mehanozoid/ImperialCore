@@ -5,7 +5,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `p
 (@GUID, 17288, 540, 0, 0, 2, 1, 0, 0, 131.106, 254.520, -45.236, 3.951, 7200, 0, 0, 6104, 0, 0, 0, 0, 0);
 
 -- Missing 2xEmblem of Justice from quest 'Imprisoned in the citadel'
-UPDATE `quest_template` SET `RewardItemId1` = 29434, `RewardItemCount1` = 2 WHERE `Id` IN (9524,9525);
+UPDATE `quest_template` SET `RewardItem1` = 29434, `RewardAmount1` = 2 WHERE `Id` IN (9524,9525);
 
 -- Update Shattered Hand Executioner loot Table
 UPDATE `creature_loot_template` SET `LootMode` = 8, `GroupId` = 1, `Chance` = 0 WHERE `Entry` = 20585;

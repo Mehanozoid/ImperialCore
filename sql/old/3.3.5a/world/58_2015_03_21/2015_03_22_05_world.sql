@@ -28,7 +28,7 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,20,2359.694,-40.27568,425.3726,0,75000,0,0,100,0);
 
 DELETE FROM `waypoint_scripts` WHERE `id` IN (488,489,490);
-INSERT INTO `waypoint_scripts` (`id`,`delay`,`command`,`datalong`,`datalong2`,`dataint`,`x`,`guid`) VALUES
+REPLACE INTO `waypoint_scripts` (`id`,`delay`,`command`,`datalong`,`datalong2`,`dataint`,`x`,`guid`) VALUES
 (488,3,15,63295,4,33575,30,891),(489,3,15,63292,4,33575,30,892),(490,3,15,63294,4,33575,30,893);
 
 UPDATE `creature` SET `modelid`=0,`spawndist`=0,`MovementType`=0, `curhealth`=1 WHERE `id`=33575;

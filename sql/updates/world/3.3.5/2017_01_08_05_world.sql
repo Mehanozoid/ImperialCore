@@ -15,7 +15,7 @@ DELETE FROM `creature` WHERE `id`=@ENTRY;
 SET @ENTRY := 21061;
 DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id`=21061);
 DELETE FROM `creature` WHERE `id`=@ENTRY;
-INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`) VALUES
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`) VALUES
 (@GUID := @GUID + 0, @ENTRY, 530, 1, 0, 0, -3968.536, 1361.080, 41.27816, 0.70625500, 300, 5, 0, 0, 0, 1),
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3963.216, 1303.419, 39.72447, 1.64708400, 300, 0, 0, 0, 0, 2), -- x + 1
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3884.351, 1303.794, 39.86781, 3.39144300, 300, 5, 0, 0, 0, 1),
@@ -66,7 +66,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_
 -- Spawn of Uvuros [-1|+3]
 SET @ENTRY := 21108;
 DELETE FROM `creature` WHERE `id`=@ENTRY;
-INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`) VALUES
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`) VALUES
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3268.571, 1355.402, 49.62804, 1.117570, 300, 0, 0, 0, 0, 2), -- x + 46
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3412.071, 1773.265, 102.8363, 5.732968, 300, 0, 0, 0, 0, 2), -- x + 47
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3876.617, 1232.423, 44.13676, 1.803640, 300, 0, 0, 0, 0, 2); -- x + 48
@@ -83,7 +83,7 @@ DELETE FROM `creature` WHERE `id`=@ENTRY;
 SET @ENTRY := 21050;
 DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id`=21050);
 DELETE FROM `creature` WHERE `id`=@ENTRY;
-INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`) VALUES
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`) VALUES
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3866.737, 1336.028, 42.74855, 2.14247500, 300, 0, 0, 0, 0, 2), -- x + 49
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3908.297, 1395.076, 43.21666, 0.11453480, 300, 5, 0, 0, 0, 1),
 (@GUID := @GUID + 1, @ENTRY, 530, 1, 0, 0, -3842.790, 1281.757, 51.66577, 4.92514000, 300, 5, 0, 0, 0, 1),

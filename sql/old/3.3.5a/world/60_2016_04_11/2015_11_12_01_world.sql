@@ -23,7 +23,7 @@ UPDATE `creature` set `MovementType`=0 WHERE `id`=15928;
 UPDATE `creature_template` set `inhabittype`=4,`unit_flags`=33554688,`unit_flags2`=2048,`ScriptName`="npc_tesla",`MovementType`=0,`flags_extra`=0 WHERE `entry`=16218;
 DELETE FROM `creature_addon` WHERE `guid` IN (select `guid` from `creature` WHERE `id` = 16218);
 DELETE FROM `creature` WHERE `id` = 16218;
-INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`movementtype`,`VerifiedBuild`) VALUES
+REPLACE INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`movementtype`,`VerifiedBuild`) VALUES
 (@CGUID+0,16218,533,3,1,3527.807,-2952.382,319.3258,3.909538,0,0,0,0),
 (@CGUID+1,16218,533,3,1,3487.762,-2911.198,319.4061,3.909538,0,0,0,0);
 INSERT INTO `creature_addon` (`guid`,`auras`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`,`SourceGroup`,`SourceEntry`,
 
 -- tesla coil visual
 DELETE FROM `gameobject` WHERE `id` IN (181477,181478);
-INSERT INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`VerifiedBuild`) VALUES
+REPlACE INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`VerifiedBuild`) VALUES
 (@OGUID+0,181477,533,3,1,3527.94,-2952.263,318.8983,3.141593,0,0,-1,0,0,0),
 (@OGUID+1,181478,533,3,1,3487.324,-2911.383,318.8983,3.141593,0,0,-1,0,0,0);
 

@@ -1,6 +1,6 @@
 --
 DELETE FROM `creature` WHERE `id`=2435;
-INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES 
 (11004, 2435, 0, 1, 1, 0, 1, -740.538, -525.298, 21.9343, 3.9523, 3600, 0, 0, 1163, 0, 0, 0, 0, 0);
 
 DELETE FROM `smart_scripts` WHERE `entryorguid`=2435;

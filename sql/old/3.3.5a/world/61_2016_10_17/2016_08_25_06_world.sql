@@ -48,7 +48,7 @@ UPDATE `creature_template` SET `AIName`='', `ScriptName`='npc_ymirjar_harpooner'
 UPDATE `gameobject_template` SET `ScriptName`='' WHERE `entry` IN (192175,192176,192177);
 
 DELETE FROM `areatrigger_scripts` WHERE `ScriptName`='at_skadi_gaunlet';
-INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES
+REPLACE INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES
 (4991,'at_skadi_gaunlet');
 
 DELETE FROM `creature_text` WHERE `entry` IN (26893);
@@ -61,7 +61,7 @@ INSERT INTO `disables` (`sourceType`, `entry`, `flags`, `params_0`, `params_1`, 
 (0,49308,64,0,0,'Disable LoS for spell Utgard Pinacle Reset Check');
 
 -- Conditions
-UPDATE `conditions` SET `ConditionValue2`=19871 WHERE `SourceTypeOrReferenceId`=13 and`SourceGroup`=1 and`SourceEntry`=48641;
+ /* UPDATE `conditions` SET `ConditionValue2`=19871 WHERE `SourceTypeOrReferenceId`=13 and`SourceGroup`=1 and`SourceEntry`=48641; */
 DELETE FROM `conditions` WHERE `SourceEntry` IN (47593,47594,47563,48642,47547,49308) and `SourceTypeOrReferenceId`=13;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES
 (13, 1, 47593, 0, 0, 31, 0, 3, 28351, 0, 0, 0, 0, '', ''),

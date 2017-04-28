@@ -2,7 +2,7 @@
 SET @MAXGUID := 907; 
 SET @SCRIPTID := 10800;
 DELETE FROM `waypoint_scripts` WHERE `id` IN (@SCRIPTID+0, @SCRIPTID+1, @SCRIPTID+2, @SCRIPTID+3);
-INSERT INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
+REPLACE INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
 -- TEXT
 (@SCRIPTID+0, 0, 0, 0, 0, 2403, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),
 (@SCRIPTID+1, 0, 0, 0, 0, 2401, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),

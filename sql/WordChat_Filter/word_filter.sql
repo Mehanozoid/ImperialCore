@@ -1,6 +1,5 @@
--- ----------------------------
 -- Table structure for `letter_analogs`
--- ----------------------------
+
 CREATE TABLE IF NOT EXISTS `letter_analogs` (
   `letter` varchar(1) NOT NULL DEFAULT '',
   `analogs` varchar(128) DEFAULT '',
@@ -12,8 +11,8 @@ CREATE TABLE IF NOT EXISTS `letter_analogs` (
 -- ----------------------------
 DELETE FROM `letter_analogs` WHERE `letter` >= 'a' AND `letter` <= 'z';
 INSERT INTO `letter_analogs` VALUES 
-('a', 'א@'),
-('b', 'בüג'),
+('a', 'א&'),
+('b', 'בגü'),
 ('c', 'ס'),
 ('d', 'ה'),
 ('e', 'ו¸'),
@@ -28,7 +27,7 @@ INSERT INTO `letter_analogs` VALUES
 ('n', 'ם'),
 ('o', 'מ0'),
 ('p', 'ןנ'),
-('q', 'ך'),
+('q', 'ך9'),
 ('r', 'נד'),
 ('s', 'ס$'),
 ('t', 'ע'),

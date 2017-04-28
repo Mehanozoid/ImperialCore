@@ -6,15 +6,15 @@ SET @TESLA    := 17979;
 
 -- Sironas
 -- Equips
-DELETE FROM `creature_equip_template` WHERE `entry`=@SIRONAS;
-INSERT INTO `creature_equip_template` (`entry`, `id`, `itemEntry1`) VALUES
+DELETE FROM `creature_equip_template` WHERE `creatureId`=@SIRONAS;
+REPLACE INTO `creature_equip_template` (`creatureId`, `id`, `itemId1`) VALUES
 (@SIRONAS, 1, 2244);
 
 -- Spells & scriptname
 UPDATE `creature_template` SET `spell1`=10966, `spell2`=12742, `spell3`=8282, `spell4`=0, `ScriptName`='npc_sironas' WHERE `entry`=@SIRONAS;
 -- Text
 DELETE FROM `creature_text` WHERE `entry`=@SIRONAS;
-INSERT INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `probability`, `comment`, `BroadcastTextId`) VALUES
+REPLACE INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `probability`, `comment`, `BroadcastTextId`) VALUES
 (@SIRONAS, 0, 0, 'Petulant children, pray to your gods for you are about to meet them!', 14, 100, 'Sironas SAY_SIRONAS_1 (pre aggro)',14666);
 
 -- Tesla targets
@@ -39,7 +39,7 @@ UPDATE `creature` SET `spawntimesecs`=30 WHERE `id`=@LEGOSO;
 
 -- Text
 DELETE FROM `creature_text` WHERE `entry`=@LEGOSO;
-INSERT INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `probability`, `emote`, `comment`, `BroadcastTextId`) VALUES
+REPLACE INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `probability`, `emote`, `comment`, `BroadcastTextId`) VALUES
 (@LEGOSO, 0, 0, 'There''s no turning back now. Stay close and watch my back.', 12, 100, 1, 'npc_demolitionist_legoso SAY_LEGOSO_1',14648),
 (@LEGOSO, 1, 0, 'There it is! Do you see where the large red crystal is jutting out from the Vector Coil? That''s where I need to plant the first set of explosives.', 12, 100, 25, 'npc_demolitionist_legoso SAY_LEGOSO_2',14649),
 (@LEGOSO, 2, 0, 'Cover me!', 12, 100, 5, 'npc_demolitionist_legoso SAY_LEGOSO_3',14650),

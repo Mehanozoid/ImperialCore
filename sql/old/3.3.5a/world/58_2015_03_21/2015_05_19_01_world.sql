@@ -18,5 +18,5 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 (@ENTRY,0,1,0,61,0,100,0,0,0,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,"Squire David - On Gossip Option 0 Selected - Close Gossip");
 
 DELETE FROM `spell_target_position` WHERE `id`=63026;
-INSERT INTO `spell_target_position` (`id`, `effIndex`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES 
+INSERT INTO `spell_target_position` (`id`, `EffectIndex`, `MapID`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`) VALUES 
 (63026, 0, 571, 8575.38, 921.85, 547.554, 0.2718);

@@ -62,5 +62,5 @@ INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `positi
 (20206, 16,-684.603, 2626.44, 89.1955, 'Fei Fei');
 
 DELETE FROM `gameobject` WHERE `id` =185302;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
 (28524, 185302, 530, 1, 1, -699.4442, 2742.403, 94.18588, -0.5759573, 0, 0, 0, 1, 120, 255, 1); -- 185302 (Area: 0)

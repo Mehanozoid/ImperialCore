@@ -79,7 +79,7 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 (13, 1, 37784, 0, 1, 31, 0, 3, 21797, 0, 0, 0, 0, '', 'Enforced Submission Targets Ancient Shadowmoon Spirit');
 
 DELETE FROM `spell_linked_spell` WHERE `spell_trigger`=37748;
-UPDATE `quest_template` SET `SourceSpellId`=0 WHERE  `Id`in(10645,10639);
+UPDATE `quest_template` SET `SourceItemId`=0 WHERE  `Id`in(10645,10639);
 
 DELETE FROM `creature_template_addon` WHERE `entry` IN (21876,21877,21797,21867);
 INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `bytes2`, `auras`) VALUES

@@ -12,7 +12,7 @@ DELETE FROM `waypoint_data` WHERE `id` IN (793740);
 UPDATE `creature` SET `SpawnDist` = 0, `MovementType` = 0 WHERE `guid` IN (79374);
 UPDATE `creature` SET `SpawnDist` = 0, `MovementType` = 2 WHERE `guid` IN (79373);
 DELETE FROM `creature_formations` WHERE `leaderGUID`=79373;
-INSERT INTO `creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`, `point_1`, `point_2`) VALUES 
+REPLACE INTO `creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`, `point_1`, `point_2`) VALUES 
 (79373, 79373, 0, 0, 2, 0, 0), -- Defias Evoker linked to Defias Overseer
 (79373, 79374, 2, 0, 2, 0, 0); -- Defias Evoker linked to Defias Overseer
 
@@ -128,7 +128,7 @@ DELETE FROM `creature` WHERE `guid` IN (79368,79383);
 
 -- Linked Aggro Between VanCleef and 2 Defias Blackguard Adds
 DELETE FROM `creature_formations` WHERE `leaderGUID`=79336;
-INSERT INTO `creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`, `point_1`, `point_2`) VALUES 
+REPLACE INTO `creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`, `point_1`, `point_2`) VALUES 
 (79336, 79336, 0, 0, 2, 0, 0),
 (79336, 79369, 0, 0, 2, 0, 0), -- Defias Blackguard
 (79336, 79370, 0, 0, 2, 0, 0); -- Defias Blackguard

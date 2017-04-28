@@ -69,7 +69,7 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `description`) VALUES
 (9695,   11656, "Cursed Egg #18");
 
 DELETE FROM `gameobject` WHERE `id` IN (185210,185211);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `VerifiedBuild`) VALUES
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `VerifiedBuild`) VALUES
 (26093, 185210, 530, 0, 0, 1, 1, -3550.77, 5709.02, 0.0407527, 1.12387, 0, 0, 0.532824, 0.846226, 180, 100, 1, 0),
 (9683,  185211, 530, 0, 0, 1, 1, -3550.77, 5709.02, 0.0407527, 1.12387, 0, 0, 0.532825, 0.846226, 180, 100, 1, 0),
 (26094, 185210, 530, 0, 0, 1, 1, -3568.11, 5772.55, -3.02607, 3.46437, 0, 0, 0.987005, -0.160689, 180, 100, 1, 0),

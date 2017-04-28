@@ -33,7 +33,7 @@ UPDATE `creature_questender` SET `id`=@UTHER WHERE `id`=37120 AND `quest`=24919;
 UPDATE `creature_questender` SET `id`=@SYLVANAS WHERE `id`=37120 AND `quest`=24918;
 
 DELETE FROM `spell_target_position` WHERE `ID`=72468;
-INSERT INTO `spell_target_position` (`id`, `effIndex`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`, `VerifiedBuild`) VALUES 
+INSERT INTO `spell_target_position` (`id`, `EffectIndex`, `MapId`, `PositionX`, `PositionY`, `PositionZ`, `Orientation`, `VerifiedBuild`) VALUES 
 (72468, 0, 631, -66.8684, 2158.28, 30.73743, 3.893452, 17658);
 
 DELETE FROM `gossip_menu` WHERE `entry`=11065 AND `text_id`=15382;
@@ -41,7 +41,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES
 (11065, 15382);
 
 DELETE FROM `npc_text` WHERE `ID`=15382;
-INSERT INTO `npc_text` (`ID`, `text0_1`, `BroadcastTextID0`, `prob0`, `text1_1`, `BroadcastTextID1`, `prob1`, `VerifiedBuild`) VALUES 
+INSERT INTO `npc_text` (`ID`, `text0_1`, `BroadcastTextID0`, `Probability0`, `text1_1`, `BroadcastTextID1`, `Probability1`, `VerifiedBuild`) VALUES 
 (15382, 'He''s truly gone, isn''t he?$b$bI... I can feel it.', 38510, 1, 'Was there truly no way to save him?$b$bI fear I shall always wonder.', 38511, 1, 19342);
 
 DELETE FROM `creature_text` WHERE `entry` IN (@JAINA,@MURADIN,@UTHER,@SYLVANAS,@ALEXANDROS);

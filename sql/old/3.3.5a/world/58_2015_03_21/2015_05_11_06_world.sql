@@ -6,7 +6,7 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (3746, 2, 0, 0, 46, 0, 100, 0, 3746, 0, 0, 0, 70, 7200, 0, 0, 0, 0, 0, 14, @Oguid+1, 180024, 0, 0, 0, 0, 0, 'Area Trigger 3746 - On Trigger - Respawn Mysterious Deadmines Chest'),
 (3766, 2, 0, 0, 46, 0, 100, 0, 3766, 0, 0, 0, 70, 7200, 0, 0, 0, 0, 0, 14, @Oguid, 180055, 0, 0, 0, 0, 0, 'Area Trigger 3746 - On Trigger - Respawn Mysterious Wailing Caverns');
 DELETE FROM `gameobject` WHERE `id` IN (180055, 180024);
-INSERT INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`animprogress`,`state`) VALUES
+REPLACE INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`animprogress`,`state`) VALUES
 (@Oguid,180055,43,1,1,-97.6,173.8,-79,2.08,0,0,0.862404,0.50622,-1,100,1),
 (@Oguid+1,180024,36,1,1,-32.1232,-374.64,59.06,3.0820,0,0,0.879275,-0.476315,-1,100,1); 
 DELETE FROM `gameobject_questender` WHERE `id`=180055 AND `quest`=7944;

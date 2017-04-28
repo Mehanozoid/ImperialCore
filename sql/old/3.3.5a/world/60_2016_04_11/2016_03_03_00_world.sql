@@ -42,7 +42,7 @@ INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, 
 (27240, 33470, 0, 14, 0, 1, 3, 1, 4, NULL);
 
 DELETE FROM `creature` WHERE `id`=28330;
-INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`,  `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `MovementType`) VALUES
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`,  `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `MovementType`) VALUES
 (@CGUID+0, 28330, 571, 1, 1, 4994.237, -2934.52, 289.698, 4.502949, 120, 0, 0), -- 28330 (Area: 66)
 (@CGUID+1, 28330, 571, 1, 1, 4928.283, -2954.844, 289.4258, 0.3665192, 120, 0, 0), -- 28330 (Area: 66)
 (@CGUID+2, 28330, 571, 1, 1, 4971.499, -2967.053, 290.4032, 6.021386, 120, 0, 0), -- 28330 (Area: 66)

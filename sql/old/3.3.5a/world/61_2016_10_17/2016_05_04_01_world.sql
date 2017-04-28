@@ -3,7 +3,7 @@ SET @CGUID       := 84723;
 UPDATE `creature_template` SET `InhabitType`=4 WHERE  `entry`in(29066);
 
 DELETE FROM creature WHERE `id` IN(28069,28840);
-INSERT INTO creature (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `VerifiedBuild`) VALUES
+REPLACE INTO creature (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `VerifiedBuild`) VALUES
 (@CGUID+0, 28069, 571, 0, 0, 1, 1, 0, 0, 5734.697, 3308.838, 299.8264, 1.867502, 120, 0, 0, 0, 0, 0, 0, 0, 0, 21463), -- 28069 (Area: 0)
 (@CGUID+1, 28069, 571, 0, 0, 1, 1, 0, 0, 5728.474, 3438.191, 300.8422, 0.1060605, 120, 0, 0, 0, 0, 2, 0, 0, 0, 21463), -- 28069 (Area: 0)
 (@CGUID+2, 28069, 571, 0, 0, 1, 1, 0, 0, 5717.042, 3428.265, 300.9259, 1.797689, 120, 0, 0, 0, 0, 0, 0, 0, 0, 21463), -- 28069 (Area: 0)

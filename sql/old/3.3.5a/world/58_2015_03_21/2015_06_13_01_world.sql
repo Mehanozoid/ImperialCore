@@ -5,28 +5,28 @@ UPDATE `quest_template` SET
 `RewardChoiceItemId2`=30017, -- Telonicus' Pendant of Mayhem
 `RewardChoiceItemId3`=30007, -- The Darkener's Grasp
 `RewardChoiceItemId4`=30015, -- The Sun King's Talisman
-`RewardChoiceItemCount1`=1,
-`RewardChoiceItemCount2`=1,
-`RewardChoiceItemCount3`=1,
-`RewardChoiceItemCount4`=1 WHERE `Id`=11007;
+`RewardChoiceItemQuantity1`=1,
+`RewardChoiceItemQuantity2`=1,
+`RewardChoiceItemQuantity3`=1,
+`RewardChoiceItemQuantity4`=1 WHERE `Id`=11007;
 
 -- Rewards for The Cipher of Damnation
 
 UPDATE `quest_template` SET
-`RewardItemId1`=31074, -- Amulet of the Torn-Heart
+`RewardItem1`=31074, -- Amulet of the Torn-Heart
 `RewardChoiceItemId1`=31073, -- Borak's Reminder
 `RewardChoiceItemId2`=31071, -- Grom'tor's Charge
 `RewardChoiceItemId3`=31072, -- Lohn'goron, Bow of the Torn-Heart
 `RewardChoiceItemId4`=31036, -- Oronok's Ancient Scepter
 `RewardChoiceItemId5`=31062, -- Torn-Heart Axe of Battle
 `RewardChoiceItemId6`=31038, -- Staff of the Redeemer
-`RewardItemCount1`=1, 
-`RewardChoiceItemCount1`=1,
-`RewardChoiceItemCount2`=1,
-`RewardChoiceItemCount3`=1,
-`RewardChoiceItemCount4`=1,
-`RewardChoiceItemCount5`=1,
-`RewardChoiceItemCount6`=1 WHERE `Id`=10588;
+`RewardAmount1`=1, 
+`RewardChoiceItemQuantity1`=1,
+`RewardChoiceItemQuantity2`=1,
+`RewardChoiceItemQuantity3`=1,
+`RewardChoiceItemQuantity4`=1,
+`RewardChoiceItemQuantity5`=1,
+`RewardChoiceItemQuantity6`=1 WHERE `Id`=10588;
 
 -- Voa Summon Stone
 

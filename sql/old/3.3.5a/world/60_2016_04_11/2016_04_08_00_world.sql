@@ -1,7 +1,7 @@
 SET @CGUID := 78642;
 
 DELETE FROM `creature` WHERE  `id` IN(17417,17418,17404,17405);
-INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `MovementType`) VALUES
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `MovementType`) VALUES
 (@CGUID+0, 17417, 530, 1, 1, 214.6568, 4122.551, 79.8511, 2.251475, 120, 0, 0), -- 17417 (Area: 0) (possible waypoints or random movement)
 (@CGUID+1, 17417, 530, 1, 1, 216.0346, 4125.61, 80.22345, 2.251475, 120, 0, 0), -- 17417 (Area: 0) (possible waypoints or random movement)
 (@CGUID+2, 17404, 530, 1, 1, 211.6765, 4126.361, 79.04578, 2.391101, 120, 0, 0), -- 17404 (Area: 0) (possible waypoints or random movement)

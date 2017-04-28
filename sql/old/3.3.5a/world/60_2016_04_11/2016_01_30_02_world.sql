@@ -14,7 +14,7 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 
 DELETE FROM `creature` WHERE `id`=31077;
 DELETE FROM `creature` WHERE `guid` BETWEEN @CGUID+0 AND @CGUID+23 AND `id` IN(31030,31077);
-INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `MovementType`) VALUES
+REPLACE INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `MovementType`) VALUES
 (@CGUID+0, 31030, 571, 1, 1, 7108.229, 4428.539, 837.9857, 4.782202, 120, 0, 0), -- 31030 (Area: 210) (Auras: 4366 - 4366) (possible waypoints or random movement)
 (@CGUID+1, 31030, 571, 1, 1, 7092.146, 4431.81, 836.628, 4.590216, 120, 0, 0), -- 31030 (Area: 210) (Auras: 4366 - 4366) (possible waypoints or random movement)
 (@CGUID+2, 31030, 571, 1, 1, 7118.42, 4432.598, 837.9554, 4.869469, 120, 0, 0), -- 31030 (Area: 210) (Auras: 4366 - 4366) (possible waypoints or random movement)

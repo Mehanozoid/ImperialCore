@@ -25,7 +25,7 @@ UPDATE `gossip_menu_option` SET `action_menu_id`= 8602 WHERE `menu_id`= 5268 AND
 UPDATE `gossip_menu_option` SET `action_menu_id` = 5222 WHERE `menu_id` = 5221 AND `OptionBroadcastTextID`= 8812;
 -- Sayoc needs new lines in `gossip_menu_option` as well as the linked lines from npc_text :
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 5222 AND `OptionBroadcastTextID` IN (20582,20585,20586,20587,20588,20589);
-INSERT INTO `gossip_menu_option` (`menu_id`,`id`,`option_icon`,`option_text`,`OptionBroadcastTextID`,`option_id`,`npc_option_npcflag`,`action_menu_id`,`action_poi_id`,`box_coded`,`box_money`,`box_text`,`BoxBroadcastTextID`) VALUES
+REPLACE INTO `gossip_menu_option` (`menu_id`,`id`,`option_icon`,`option_text`,`OptionBroadcastTextID`,`option_id`,`npc_option_npcflag`,`action_menu_id`,`action_poi_id`,`box_coded`,`box_money`,`box_text`,`BoxBroadcastTextID`) VALUES
 (5222,0,0,'Crossbow',20582,1,1,8594,0,0,0,'',0),
 (5222,1,0,'Gun',20585,1,1,8597,0,0,0,'',0),
 (5222,2,0,'Mace',20586,1,1,8598,0,0,0,'',0),

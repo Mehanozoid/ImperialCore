@@ -2,7 +2,7 @@ SET @CGUID := 86075;
 SET @POOL := 32492;
 
 DELETE FROM `creature` WHERE `guid` BETWEEN @CGUID+0 AND @CGUID+6 AND `id`=4131;
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `VerifiedBuild`) VALUES
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `VerifiedBuild`) VALUES
 (@CGUID+0, 4131, 1, 0, 0, 1, 1, 11143, 0, -6484.09, -3229.87, -112.36, 3.42467, 300, 3, 0, 1221, 0, 1, 0, 0, 0, 0),
 (@CGUID+1, 4131, 1, 0, 0, 1, 1, 11143, 0, -6472.31, -3243.75, -113.38, 5.96223, 300, 3, 0, 1221, 0, 1, 0, 0, 0, 0),
 (@CGUID+2, 4131, 1, 0, 0, 1, 1, 11143, 0, -6491.48, -3245.93, -112.497, 6.10384, 300, 3, 0, 1221, 0, 1, 0, 0, 0, 0),

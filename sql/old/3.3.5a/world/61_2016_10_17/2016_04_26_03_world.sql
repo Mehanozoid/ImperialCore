@@ -1,6 +1,6 @@
 
 DELETE FROM creature WHERE `id` IN(24277,24516,24517);
-INSERT INTO creature (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `VerifiedBuild`) VALUES
+REPLACE INTO creature (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `VerifiedBuild`) VALUES
 (45211, 24277, 571, 0, 0, 1, 1, 0, 0, 2578.047, -3028.564, 115.3411, 0, 120, 0, 0, 0, 0, 2, 0, 0, 0, 21463), -- 24277 (Area: 4054) (Auras: )
 (114439, 24516, 571, 0, 0, 1, 1, 0, 0, 2245.904, -3021.815, 135.1308, 1.318242, 120, 0, 0, 0, 0, 2, 0, 0, 0, 21463), -- 24516 (Area: 0)
 (114637, 24517, 571, 0, 0, 1, 1, 0, 0, 1886.899, -3555.015, 147.7859, 2.676408, 120, 0, 0, 0, 0, 2, 0, 0, 0, 21463); -- 24517 (Area: 3999) (Auras: 52071 - 52071)

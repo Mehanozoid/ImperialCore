@@ -7,7 +7,7 @@ SET @PATH := @NPC * 10;
 
 -- Object Spawn from sniff
 DELETE FROM `gameobject` WHERE `id`=186664;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
 (@OGUID,186664,571,1,2,1073.001,-5033.952,9.771218,1.518436,0,0,0.6883545,0.7253745,300,0,1); -- Baby in Crib
 
 -- Creature Spawns from sniff

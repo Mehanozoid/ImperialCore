@@ -88,7 +88,7 @@ INSERT INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `language
 (@NPC_JAINA, 4, 0, "Farewell, Warchief. I pray that the next time we meet it will be as allies.", 12, 0, 100, 0, 0, 16133, 32299, 0, "Jaina - herald of war");
 
 DELETE FROM `gameobject` WHERE `id` IN (@OG_PORTAL, @HORDE_BUILDING5, @HORDE_BUILDING4, @HORDE_BUILDING2, @HORDE_BUILDING3, @UCPORTAL);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `VerifiedBuild`) VALUES
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `VerifiedBuild`) VALUES
 (@OGUID, @OG_PORTAL, 571, 3537, 4129, 1, 1, 2830.01, 6179.37, 84.66, 4.16, 0, 0, 0.715875, -0.698228, 120, 100, 1, 0),
 (@OGUID + 1, @HORDE_BUILDING5, 1, 14, 14, 1, 64, 1339.00, -4413.98, 27.25, 2.29, 0, 0, 0, 0, 600, 0, 1, 0),
 (@OGUID + 2, @HORDE_BUILDING5, 1, 1637, 1637, 1, 64, 1508.90, -4429.49, 21.95, 6.13, 0, 0, 0, 0, 600, 0, 1, 0),

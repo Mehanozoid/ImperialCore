@@ -36,7 +36,7 @@
         SET @HEALS      := 35162;
 
         DELETE FROM `gameobject` WHERE `id` BETWEEN 22882 AND 22887 AND `map`=560;
-        INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+        REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
         (@OGUID+0, 22882, 560, 3, 1, 1823.365, 1029.282, 11.64124, 1.439896, 0, 0, 0.7071069, 0.7071066, 7200, 255, 1),
         (@OGUID+1, 22883, 560, 3, 1, 1824.24, 1031.343, 11.64124, 0.5061446, 0, 0, 0.7071069, 0.7071066, 7200, 255, 1),
         (@OGUID+2, 22884, 560, 3, 1, 1822.9, 1032.183, 11.64124, 3.141593, 0, 0, 0.7071069, 0.7071066, 7200, 255, 1),

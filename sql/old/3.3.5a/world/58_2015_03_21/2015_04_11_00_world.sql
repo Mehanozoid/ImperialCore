@@ -13,8 +13,8 @@ DELETE FROM `gameobject` WHERE `guid` IN (@OGUID);
 INSERT INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`animprogress`,`state`) VALUES
 (@OGUID,50983,530,1,1, -5116.788574, 631.188660, 85.055522,0.949811,0,0,0.457254, 0.889336, 300, 0, 1);
 
-DELETE FROM `creature_equip_template` WHERE `entry`=23146;
-INSERT INTO `creature_equip_template` (`entry`, `id`, `itemEntry1`, `itemEntry2`, `itemEntry3`, `VerifiedBuild`) VALUES (23146, 1, 31603, 0, 0, 0);
+DELETE FROM `creature_equip_template` WHERE `CreatureID`=23146;
+INSERT INTO `creature_equip_template` (`CreatureID`, `ID`, `ItemID1`, `ItemID2`, `ItemID3`, `VerifiedBuild`) VALUES (23146, 1, 31603, 0, 0, 0);
 UPDATE `creature` SET `position_x`= -5158.237305, `position_y`= 584.302612, `position_z`= 81.074142, `orientation`= 5.954358 WHERE `guid`= 78136;
 UPDATE `creature` SET `position_x`= -5156.172363, `position_y`= 590.695251, `position_z`= 80.769630, `orientation`= 5.502757 WHERE `guid`= 78135;
 UPDATE `creature` SET `position_x`= -5152.365723, `position_y`= 592.303040, `position_z`= 81.361931, `orientation`= 4.705578 WHERE `guid`= 78137;

@@ -62,7 +62,7 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 SET @MAXGUID := 935; 
 SET @SCRIPTID := 11730800; 
 DELETE FROM `waypoint_scripts` WHERE `id` IN (@SCRIPTID+0);
-INSERT INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
+REPLACE INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
 (@SCRIPTID+0, 16, 1, 51, 0, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1));
 
 SET @NPC := 117308;
@@ -93,7 +93,7 @@ UPDATE `creature` SET `spawndist`=0, `MovementType`=0 WHERE  `guid` IN (117310);
 SET @MAXGUID := 936; 
 SET @SCRIPTID := 11730800; 
 DELETE FROM `waypoint_scripts` WHERE `id` IN (@SCRIPTID+0);
-INSERT INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
+REPLACE INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
 (@SCRIPTID+0, 1, 1, 36, 0, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1));
 
 SET @NPC := 117310;

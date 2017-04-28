@@ -42,7 +42,7 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 SET @MAXGUID := 943; 
 SET @SCRIPTID := 2984300; 
 DELETE FROM `waypoint_scripts` WHERE `id` IN (@SCRIPTID+0);
-INSERT INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
+REPLACE INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
 -- UNIT_FIELD_BYTES_1 UNIT_FIELD_BYTES_1(74) | UNIT_NPC_EMOTESTATE (83)
 (@SCRIPTID+0, 6, 2, 74, 8, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1)),
 (@SCRIPTID+0, 10, 2, 74, 0, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1));

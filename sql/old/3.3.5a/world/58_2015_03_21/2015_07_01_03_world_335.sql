@@ -20,29 +20,3 @@ CREATE TABLE IF NOT EXISTS  `quest_template_addon` (                  -- old nam
   `SpecialFlags`          tinyint(3) unsigned NOT NULL DEFAULT '0',   -- SpecialFlags
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
--- moving data from `quest_template` to `quest_template_addon`
-INSERT INTO `quest_template_addon`
-(`ID`, `MaxLevel`, `AllowableClasses`, `SourceSpellID`, `PrevQuestID`, `NextQuestID`, `ExclusiveGroup`, `RewardMailTemplateID`, `RewardMailDelay`, `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, `ProvidedItemCount`, `SpecialFlags`)
-(SELECT `ID`, `MaxLevel`, `RequiredClasses`, `SourceSpellId`, `PrevQuestId`, `NextQuestId`, `ExclusiveGroup`, `RewardMailTemplateId`, `RewardMailDelay`, `RequiredSkillId`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, `SourceItemCount`, `SpecialFlags` FROM `quest_template`);
-
-
--- drop `quest_template` fields
-ALTER TABLE `quest_template`
-DROP `MaxLevel`,
-DROP `RequiredClasses`,
-DROP `SourceSpellId`,
-DROP `PrevQuestId`,
-DROP `NextQuestId`,
-DROP `ExclusiveGroup`,
-DROP `RewardMailTemplateId`,
-DROP `RewardMailDelay`,
-DROP `RequiredSkillId`,
-DROP `RequiredSkillPoints`,
-DROP `RequiredMinRepFaction`,
-DROP `RequiredMaxRepFaction`,
-DROP `RequiredMinRepValue`,
-DROP `RequiredMaxRepValue`,
-DROP `SourceItemCount`,
-DROP `SpecialFlags`;

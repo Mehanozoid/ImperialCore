@@ -13,7 +13,7 @@ UPDATE `creature_text` SET `probability`=16 WHERE `entry`=15953 and `groupid`=2;
 -- Completely re-do eruption fissure spawns
 SET @OGUID2 = 84980; -- gameobject GUID (76 objects); needs to match the constant in boss_heigan.cpp
 DELETE FROM `gameobject` WHERE `id` between 181510 and 181552;
-INSERT INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`animprogress`,`state`,`VerifiedBuild`) VALUES
+REPLACE INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`rotation0`,`rotation1`,`rotation2`,`rotation3`,`spawntimesecs`,`animprogress`,`state`,`VerifiedBuild`) VALUES
     (@OGUID2+0,181510,533,3,1,2787.255000,-3654.130000,274.316700,3.534301,0.000000,0.000000,-0.980784,0.195095,0,0,1,15354),
     (@OGUID2+1,181526,533,3,1,2781.556000,-3670.999000,274.351800,3.153633,0.000000,0.000000,-0.999982,0.006020,0,0,1,15354),
     (@OGUID2+2,181511,533,3,1,2782.403000,-3660.402000,274.314800,2.110888,0.000000,0.000000,0.870119,0.492841,0,0,1,15354),

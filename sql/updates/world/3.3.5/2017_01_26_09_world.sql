@@ -13,7 +13,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `p
 SET @MAXGUID := 942; 
 SET @SCRIPTID := 11393600; 
 DELETE FROM `waypoint_scripts` WHERE `id` IN (@SCRIPTID+0);
-INSERT INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
+REPLACE INTO `waypoint_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`, `guid`) VALUES 
 -- EMOTE (oneshot)
 (@SCRIPTID+0, 13, 1, 53, 0, 0, 0, 0, 0, 0, (@MAXGUID := @MAXGUID + 1));
 

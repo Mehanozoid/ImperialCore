@@ -4,7 +4,7 @@ SET @CGUID       := 143505;
 UPDATE `gameobject_template` SET `flags`=32 WHERE  `entry`IN (177257,177258,177259,179504,179505,179503,179506);
 
 DELETE FROM `gameobject` where `id` IN (177257,177258,177259,179504,179505,179503,179506,179563,177219,179563,177219,177221,177211,177212,177215,179549,177217)  AND  `map`=429;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`,  `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+REPlACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`,  `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
 (@OGUID+0, 177258, 429, 3, 1,  121.2223, 429.0921, 28.45481, 0.4188786, 0, 0, 1, -4.371139E-08, 7200, 255, 1), -- 177258 (Area: 0)
 (@OGUID+1, 177259, 429, 3, 1,  12.94134, 277.9307, -8.932899, 0, 0, 0, 1, -4.371139E-08, 7200, 255, 1), -- 177259 (Area: 5915)
 (@OGUID+2, 177257, 429, 3, 1,  -92.34557, 442.6703, 28.54704, 0.4188786, 0, 0, 1, -4.371139E-08, 7200, 255, 1), -- 177257 (Area: 5915)

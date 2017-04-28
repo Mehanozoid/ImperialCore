@@ -8,7 +8,7 @@ UPDATE `creature_template` SET `faction`=40 WHERE  `entry`IN(10601,10602);
 
 
 DELETE FROM `gameobject` WHERE `id` IN(175571,175584);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
 (@OGUID+0, 175571, 229, 3, 1, -47.90947, -369.0891, 51.54253, 1.378809, 0, 0, 0, 1, -1, 255, 1), -- 175571 (Area: 0)
 (@OGUID+1, 175571, 229, 3, 1, -27.88039, -385.8911, 48.50668, 3.700105, 0, 0, 0, 1, -1, 255, 1), -- 175571 (Area: 0)
 (@OGUID+2, 175571, 229, 3, 1, -13.72754, -384.8161, 48.97457, 3.68265, 0, 0, 0, 1, -1, 255, 1), -- 175571 (Area: 0)

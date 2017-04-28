@@ -2,7 +2,7 @@ SET @OGUID := 74901;
 
 UPDATE `gameobject` SET `spawntimesecs`=120 WHERE   `id`=188441;
 DELETE FROM `gameobject` WHERE `id`=188441 AND `guid` BETWEEN @OGUID+0 AND @OGUID+28;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
 (@OGUID+0 , 188441, 571, 1, 1, 4599.037, 285.0833, 95.23787, 0.4188786, 0, 0, 0, 1, 120, 255, 1), -- 188441 (Area: 65)
 (@OGUID+1 , 188441, 571, 1, 1, 4556.1, 231.2934, 96.77894, 0.4537851, 0, 0, 0, 1, 120, 255, 1), -- 188441 (Area: 65)
 (@OGUID+2 , 188441, 571, 1, 1, 4499.447, 108.0523, 89.83501, 3.996807, 0, 0, 0, 1, 120, 255, 1), -- 188441 (Area: 65)

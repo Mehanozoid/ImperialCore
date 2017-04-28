@@ -48,7 +48,7 @@ INSERT INTO `creature_template_addon` (`entry`,`mount`,`auras`) VALUES
 UPDATE `creature_template` SET `ScriptName`="npc_gothik_trigger",`InhabitType`=7 WHERE `entry`=16137;
 -- re-do spawn locations for triggers
 DELETE FROM `creature` WHERE `id`=16137;
-INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`movementtype`) VALUES
+REPLACE INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`movementtype`) VALUES
 (@CGUID+00,16137,533,3,1,2643.731,-3399.681,284.1829,0,0,0,0), -- living   side soul  trigger (south)
 (@CGUID+01,16137,533,3,1,2739.995,-3399.779,284.2946,0,0,0,0), -- living   side soul  trigger (north)
 (@CGUID+02,16137,533,3,1,2643.731,-3321.727,284.2327,0,0,0,0), -- spectral side soul  trigger (south)

@@ -19,7 +19,7 @@ INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `positi
 (10610, 4, -6031.16,-230.264,414.361, 'Angus');
 
 DELETE FROM `spell_target_position` WHERE id IN (18634,16572,16767,16768,16772,16775,16776,16777,16778,16779,16780,16786,18634);
-INSERT INTO `spell_target_position` (id, target_map, target_position_x, target_position_y, target_position_z, target_orientation) VALUES 
+INSERT INTO `spell_target_position` (id, MapID, PositionX, PositionY, PositionZ, Orientation) VALUES 
 (16572,0,-6046.85,-207.329,418.304,0),
 (16767,0,-6046.73,-207.159,417.267,0),
 (16768,0,-6051.39,-206.749,418.159,0),
